@@ -7,7 +7,28 @@
 ## 1.2 Snippets
 
 1. 建立创世区块geth --datadir [datadir_path] init [genesis_profile.json]
+
+~~~json
+{
+    "config": {
+        "chainId": 15,
+        "homesteadBlock": 0,
+        "eip155Block": 0,
+        "eip158Block": 0
+    },
+    "difficulty": "20000",
+    "gasLimit": "21000000",
+    "alloc": {
+        
+    }
+}
+
+~~~
+
+
+
 2. 创建PrivateChain网络，注意network_id的选择geth --datadir [data_dir_path] --networkid [network_id]
+
 3. 另开一个终端，通过IPC的方式连接上节点geth attach [data_dir_path]/geth.ipc
 4. 创建一个账户personal.newAccount()
 5. miner.start()
